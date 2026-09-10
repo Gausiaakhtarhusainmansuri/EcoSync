@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>EcoSync Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EcoSync
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/collection">Collection</a>
+
+            <a href="/reports">Reports</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Dashboard Header -->
+
+    <div class="dashboard-header">
+
+        <h1>Dashboard</h1>
+
+        <p>Overview of EcoSync activities</p>
+
+    </div>
+
+
+    <!-- Statistics -->
+
+    <div class="dashboard">
+
+        <div class="stats">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    👥
+                </div>
+
+                <h3>Total Participants</h3>
+
+                <h2>{{ total_participants }}</h2>
+
+                <p>Registered participants</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📱
+                </div>
+
+                <h3>Mobile Phones</h3>
+
+                <h2>{{ mobile_count }}</h2>
+
+                <p>Registered items</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    💻
+                </div>
+
+                <h3>Laptops</h3>
+
+                <h2>{{ laptop_count }}</h2>
+
+                <p>Registered items</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🔌
+                </div>
+
+                <h3>Chargers</h3>
+
+                <h2>{{ charger_count }}</h2>
+
+                <p>Registered items</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⌨️
+                </div>
+
+                <h3>Keyboards</h3>
+
+                <h2>{{ keyboard_count }}</h2>
+
+                <p>Registered items</p>
+
+            </div>
+
+
+            <div class="card total-card">
+
+                <div class="card-icon">
+                    ♻
+                </div>
+
+                <h3>Total E-Waste</h3>
+
+                <h2>{{ total_e_waste }}</h2>
+
+                <p>Items collected</p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Quick Actions -->
+
+        <div class="actions">
+
+            <h2>Quick Actions</h2>
+
+            <p>Manage EcoSync activities</p>
+
+
+            <div class="action-buttons">
+
+                <a href="/participants">
+                    <button>View Participants</button>
+                </a>
+
+                <a href="/collections">
+                    <button>View Collections</button>
+                </a>
+
+                <a href="/collection">
+                    <button>Record Collection</button>
+                </a>
+
+                <a href="/certificate">
+                    <button>Generate Certificate</button>
+                </a>
+
+                <a href="/reports">
+                    <button>View Reports</button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>EcoSync | E-Waste Collection Initiative</p>
+
+        <span>Building a cleaner and greener future.</span>
+
+    </footer>
+
+</body>
+
+</html>

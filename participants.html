@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>EcoSync - Participants</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EcoSync
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/collection">Collection</a>
+            <a href="/reports">Reports</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Page Header -->
+
+    <div class="page-header">
+
+        <h1>Registered Participants</h1>
+
+        <p>
+            List of participants registered for the EcoSync E-Waste Drive.
+        </p>
+
+    </div>
+
+
+    <!-- Participants Table -->
+
+    <div class="table-section">
+
+        <div class="table-card">
+
+            <table>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>College</th>
+                    <th>E-Waste Type</th>
+                    <th>Action</th>
+
+                </tr>
+
+                {% for participant in participants %}
+
+                <tr>
+
+                    <td>{{ participant[0] }}</td>
+                    <td>{{ participant[1] }}</td>
+                    <td>{{ participant[2] }}</td>
+                    <td>{{ participant[3] }}</td>
+                    <td>{{ participant[4] }}</td>
+                    <td>{{ participant[5] }}</td>
+
+                    <td>
+
+                        <a href="/delete/{{ participant[0] }}"
+                           onclick="return confirm('Are you sure you want to delete this participant?');">
+
+                            <button>Delete</button>
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- Page Actions -->
+
+    <div class="page-actions">
+
+        <a href="/dashboard">
+            <button>Back to Dashboard</button>
+        </a>
+
+        <a href="/register">
+            <button>Register New Participant</button>
+        </a>
+
+        <a href="/collection">
+            <button>Record New Collection</button>
+        </a>
+
+        <a href="/">
+            <button>Go to Home</button>
+        </a>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            EcoSync | E-Waste Collection Initiative
+        </p>
+
+        <span>
+            Building a cleaner and greener future.
+        </span>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>EcoSync - Registration</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EcoSync
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/collection">Collection</a>
+
+            <a href="/reports">Reports</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Page Heading -->
+
+    <div class="page-header">
+
+        <h1>Registration Form</h1>
+
+        <p>
+            Register a participant for the EcoSync E-Waste Collection Drive.
+        </p>
+
+    </div>
+
+
+    <!-- Registration Form -->
+
+    <form action="/register" method="POST">
+
+        <label>Name</label>
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+        >
+
+        <br><br>
+
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <br><br>
+
+
+        <label>Phone</label>
+
+        <input
+            type="tel"
+            name="phone"
+            placeholder="Enter 10-digit phone number"
+            required
+        >
+
+        <br><br>
+
+
+        <label>College</label>
+
+        <input
+            type="text"
+            name="college"
+            placeholder="Enter your college name"
+            required
+        >
+
+        <br><br>
+
+
+        <label>E-Waste Type</label>
+
+        <select name="e_waste_type" required>
+
+            <option value="Mobile">
+                Mobile
+            </option>
+
+            <option value="Laptop">
+                Laptop
+            </option>
+
+            <option value="Charger">
+                Charger
+            </option>
+
+            <option value="Keyboard">
+                Keyboard
+            </option>
+
+        </select>
+
+        <br><br>
+
+
+        <button type="submit">
+            Register Participant
+        </button>
+
+    </form>
+
+
+    <!-- Back Button -->
+
+    <div class="page-actions">
+
+        <a href="/dashboard">
+            <button>Back to Dashboard</button>
+        </a>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            EcoSync | E-Waste Collection Initiative
+        </p>
+
+        <span>
+            Building a cleaner and greener future.
+        </span>
+
+    </footer>
+
+</body>
+
+</html>

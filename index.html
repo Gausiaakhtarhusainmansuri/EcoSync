@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>EcoSync</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EcoSync
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/collection">Collection</a>
+
+            <a href="/reports">Reports</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eco-icon">
+                ♻
+            </div>
+
+            <h1>EcoSync</h1>
+
+            <h2>Smart E-Waste Collection Management</h2>
+
+            <p>
+                A simple and efficient platform to register,
+                collect and manage electronic waste responsibly.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/register">
+                    <button class="primary-btn">
+                        Register Participant
+                    </button>
+                </a>
+
+                <a href="/dashboard">
+                    <button class="secondary-btn">
+                        Open Dashboard
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+
+    <section class="features">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                👥
+            </div>
+
+            <h3>Participant Management</h3>
+
+            <p>
+                Register and manage participants
+                of the e-waste collection drive.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ♻
+            </div>
+
+            <h3>E-Waste Collection</h3>
+
+            <p>
+                Record and track different types
+                of electronic waste collected.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>Reports & Analytics</h3>
+
+            <p>
+                View collection statistics and
+                generate useful reports.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Quick Actions -->
+
+    <section class="quick-actions">
+
+        <h2>Quick Actions</h2>
+
+        <a href="/collection">
+            <button>Record E-Waste</button>
+        </a>
+
+        <a href="/certificate">
+            <button>Generate Certificate</button>
+        </a>
+
+        <a href="/reports">
+            <button>View Reports</button>
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            EcoSync | E-Waste Collection Initiative
+        </p>
+
+        <span>
+            Building a cleaner and greener future.
+        </span>
+
+    </footer>
+
+</body>
+
+</html>

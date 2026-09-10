@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>EcoSync - Collections</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EcoSync
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/collection">Collection</a>
+            <a href="/reports">Reports</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Page Header -->
+
+    <div class="page-header">
+
+        <h1>Collected E-Waste</h1>
+
+        <p>
+            List of e-waste collections recorded in EcoSync.
+        </p>
+
+    </div>
+
+
+    <!-- Collections Table -->
+
+    <div class="table-section">
+
+        <div class="table-card">
+
+            <table>
+
+                <tr>
+
+                    <th>Collection ID</th>
+                    <th>Participant ID</th>
+                    <th>E-Waste Type</th>
+                    <th>Quantity</th>
+                    <th>Collection Date</th>
+
+                </tr>
+
+                {% for collection in collections %}
+
+                <tr>
+
+                    <td>{{ collection[0] }}</td>
+                    <td>{{ collection[1] }}</td>
+                    <td>{{ collection[2] }}</td>
+                    <td>{{ collection[3] }}</td>
+                    <td>{{ collection[4] }}</td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- Page Actions -->
+
+    <div class="page-actions">
+
+        <a href="/collection">
+            <button>Record New Collection</button>
+        </a>
+
+        <a href="/dashboard">
+            <button>Back to Dashboard</button>
+        </a>
+
+        <a href="/">
+            <button>Go to Home</button>
+        </a>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            EcoSync | E-Waste Collection Initiative
+        </p>
+
+        <span>
+            Building a cleaner and greener future.
+        </span>
+
+    </footer>
+
+</body>
+
+</html>

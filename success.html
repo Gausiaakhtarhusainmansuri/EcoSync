@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Registration Successful</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>Registration Successful!</h1>
+
+    <p>Thank you <strong>{{ name }}</strong> for registering with EcoSync.</p>
+
+    <p>Your participation details have been saved successfully.</p>
+
+    <br>
+
+    <a href="/">
+        <button>Go to Home</button>
+    </a>
+
+    <br><br>
+
+    <a href="/register">
+    <button>Register Another Participant</button>
+    </a>
+
+</body>
+
+</html>

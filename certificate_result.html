@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>EcoSync - Certificate</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EcoSync
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/collection">Collection</a>
+
+            <a href="/reports">Reports</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Certificate -->
+
+    <div class="certificate">
+
+        <h1>CERTIFICATE OF PARTICIPATION</h1>
+
+        <p>This certificate is proudly presented to</p>
+
+        <h2>{{ name }}</h2>
+
+        <p>
+            For participating in the EcoSync E-Waste
+            Collection Drive and contributing towards
+            responsible e-waste management.
+        </p>
+
+        <p>
+            Registered E-Waste Type:
+            <strong>{{ e_waste_type }}</strong>
+        </p>
+
+        <br>
+
+        <p>
+            Thank you for supporting a cleaner and greener environment.
+        </p>
+
+        <br>
+
+        <p>
+            Date: {{ date }}
+        </p>
+
+        <br>
+
+        <h3>EcoSync</h3>
+
+        <p>
+            E-Waste Collection Initiative
+        </p>
+
+    </div>
+
+
+    <!-- Certificate Actions -->
+
+    <div class="certificate-actions">
+
+        <a href="/certificate">
+            <button>Generate Another Certificate</button>
+        </a>
+
+        <a href="/dashboard">
+            <button>Back to Dashboard</button>
+        </a>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            EcoSync | E-Waste Collection Initiative
+        </p>
+
+        <span>
+            Building a cleaner and greener future.
+        </span>
+
+    </footer>
+
+</body>
+
+</html>

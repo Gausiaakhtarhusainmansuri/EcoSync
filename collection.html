@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>EcoSync - E-Waste Collection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EcoSync
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/collection">Collection</a>
+
+            <a href="/reports">Reports</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Page Heading -->
+
+    <div class="page-header">
+
+        <h1>E-Waste Collection</h1>
+
+        <p>
+            Record electronic waste collected from registered participants.
+        </p>
+
+    </div>
+
+
+    <!-- Collection Form -->
+
+    <form action="/collection" method="POST">
+
+        <label>Participant ID</label>
+
+        <input
+            type="number"
+            name="participant_id"
+            placeholder="Enter Participant ID"
+            required
+        >
+
+        <br><br>
+
+
+        <label>E-Waste Type</label>
+
+        <select name="e_waste_type" required>
+
+            <option value="">
+                Select E-Waste Type
+            </option>
+
+            <option value="Mobile">
+                Mobile
+            </option>
+
+            <option value="Laptop">
+                Laptop
+            </option>
+
+            <option value="Keyboard">
+                Keyboard
+            </option>
+
+            <option value="Charger">
+                Charger
+            </option>
+
+        </select>
+
+        <br><br>
+
+
+        <label>Quantity</label>
+
+        <input
+            type="number"
+            name="quantity"
+            placeholder="Enter quantity"
+            min="1"
+            required
+        >
+
+        <br><br>
+
+
+        <label>Collection Date</label>
+
+        <input
+            type="date"
+            name="collection_date"
+            required
+        >
+
+        <br><br>
+
+
+        <button type="submit">
+            Record Collection
+        </button>
+
+    </form>
+
+
+    <!-- Page Actions -->
+
+    <div class="page-actions">
+
+        <a href="/dashboard">
+            <button>Back to Dashboard</button>
+        </a>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            EcoSync | E-Waste Collection Initiative
+        </p>
+
+        <span>
+            Building a cleaner and greener future.
+        </span>
+
+    </footer>
+
+</body>
+
+</html>

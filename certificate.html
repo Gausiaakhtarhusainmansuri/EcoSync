@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>EcoSync - Certificate</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EcoSync
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/collection">Collection</a>
+
+            <a href="/reports">Reports</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Page Heading -->
+
+    <div class="page-header">
+
+        <h1>Certificate Generation</h1>
+
+        <p>
+            Generate a certificate for an EcoSync participant.
+        </p>
+
+    </div>
+
+
+    <!-- Certificate Form -->
+
+    <form action="/certificate" method="POST">
+
+        <label>Participant ID</label>
+
+        <input
+            type="number"
+            name="participant_id"
+            placeholder="Enter Participant ID"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Generate Certificate
+        </button>
+
+    </form>
+
+
+    <!-- Page Actions -->
+
+    <div class="page-actions">
+
+        <a href="/dashboard">
+            <button>Back to Dashboard</button>
+        </a>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            EcoSync | E-Waste Collection Initiative
+        </p>
+
+        <span>
+            Building a cleaner and greener future.
+        </span>
+
+    </footer>
+
+</body>
+
+</html>
